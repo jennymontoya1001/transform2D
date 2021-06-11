@@ -1,0 +1,60 @@
+body{
+    background: palevioletred;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.caja{
+    margin: 150px 15px;
+    width: 150px;
+    height: 150px;
+    background: purple;
+    color: white;
+    font-size: 40px;
+    line-height: 150px;
+    text-align: center;
+    transition: all 1s; /*permite apreciar las animaciones
+    */
+}
+
+/*nth-child toma un conjunto de elementos como un vector,
+es decir por posiciones en las cuales las indico entre los paréntesis
+del nth-child(1)*/
+
+/*traslate*/
+.caja:nth-child(1){
+    background: purple;
+    transform: translateY(-100px);
+    /*los elementos con valor positivo bajan
+    los elementos con valor negativo suben*/
+}
+
+/*rotate rotación y debemos tener en cuenta el ángulo
+podemos trabajar en grados, en gradientes, en radianes, en turn(cantidad de vueltas)*/
+.caja:nth-child(2){
+   background: purple;
+   transform: rotate(360deg);
+   /* transform: rotate(360deg) translateX(50px)*/
+}
+
+
+/*Scale redimensiona el tamaño del elemtno
+el valor enviado como parámetro lo multiplica
+por el valor de ancho o de alto que se le haya definido
+al elemento*/
+.caja:nth-child(3){
+   background: purple;
+   transform:  scaleY(2);
+}
+
+
+/*Skew estira o distorsiona el elemento*/
+.caja:nth-child(4){
+    background: green;
+    transform:  skewX(50deg)
+ }
+
